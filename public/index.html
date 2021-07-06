@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+
+        <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            var firebaseConfig = {
+                apiKey: 'AIzaSyCV167AQ0QK8Y58MntaaLiXl-gTgOWkPTg',
+                authDomain: 'fir-practice-62522.firebaseapp.com',
+                projectId: 'fir-practice-62522',
+                storageBucket: 'fir-practice-62522.appspot.com',
+                messagingSenderId: '970064776762',
+                appId: '1:970064776762:web:b59dc4aea8417e23e7ef03',
+                measurementId: 'G-7K5HKB4ER0',
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+        </script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"
+            integrity="sha384-PlFzuf6GOlJNxLuosezJ/jwndIVZ2hWI/AmvYQtBzstOdLtcUe6DPSI4LsqwiN1y"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./app.js" defer></script>
+    </head>
+    <body>
+        <h1>My Awesome Web App</h1>
+
+        <section id="when_signed_out">
+            <button id="sign_in_btn">Sign in with google</button>
+        </section>
+
+        <section id="when_signed_in" hidden="true">
+            <div id="user_details"></div>
+            <button id="sign_out_btn">Sign Out</button>
+        </section>
+
+        <section>
+            <ul id="things-list"></ul>
+            <button id="create-thing">Create Random Thing</button>
+        </section>
+    </body>
+</html>
